@@ -48,6 +48,7 @@ app.post("/api/request_disclosure", async (req, res) => {
   res.json({ jwt });
 });
 
+// after scan QR
 app.post("/api/send_verification", async (req, res) => {
   const {
     serviceId,
@@ -56,6 +57,8 @@ app.post("/api/send_verification", async (req, res) => {
     callbackUrl
   } = req.body;
   const credentials = getCredentials(serviceId);
+
+  console.log('callbackUrl', callbackUrl)
   const jwt = await credentials.createVerification({
     sub,
     vc: ISSUERS[serviceId].vc,

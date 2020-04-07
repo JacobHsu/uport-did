@@ -14,6 +14,17 @@ What's inside:
   - [x] Creates Issuer (application) Identities
   - [x] Stores the generated Identity key/pairs in SSM 
 
+## localhost
+
+### backend
+
+src\server.js  -> backend/server.js  
+cd backend `$ node server`
+
+### frontend 
+
+`$ yarn start`
+
 ### References
 
 uport-project / [uportlandia](https://github.com/uport-project/uportlandia)
