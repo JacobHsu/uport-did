@@ -290,5 +290,27 @@ yarn deploy:static  --env stage
 1. Customize the Static Text: [English](src/constants/i18-en.js) and [Spanish](src/constants/i18-es.js)
 1. Change the [Color Palette](src/components/shared/theme.js)
 
-
 [FAQ and helpdesk support](http://bit.ly/uPort_helpdesk)
+
+## serverless.js
+
+`serverless.js` 對應 serverless.yml
+
+```js
+  package: {
+    exclude: [ "./**" ],
+    include: [ "src/server.js" ]
+  }
+```
+
+服務/運算/[Lambda](https://console.aws.amazon.com/lambda/home?region=us-east-1#/functions)
+
+uportlandia-stage-server
+-  API Gateway
+
+src/server.js
+
+```js
+const handler = require("serverless-express/handler");
+const express = require("serverless-express/express");
+```

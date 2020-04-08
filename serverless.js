@@ -1,13 +1,13 @@
 const { config } = require("./setup_config");
 
 const slsConfig = {
-  service: config.serviceName,
+  service: config.serviceName, // uportlandia
   provider: {
     name: "aws",
     runtime: "nodejs12.x",
-    region: config.region,
+    region: config.region, // us-east-1
     environment: {
-      ISSUERS: `$\{ssm:${config.ssmParam.issuers}~true}`
+      ISSUERS: `$\{ssm:${config.ssmParam.issuers}~true}` ///uportdid/stage/issuers
     }
   },
   custom: {
