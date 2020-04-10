@@ -112,6 +112,25 @@ export const registration = {
   }
 };
 
+const BANK_ID = { // This should match the registrationBank Config
+  id: "BANK_ID",
+  name: "Bank ID",
+  displayName: "bankIdDisplayName",
+  icon: CityIDIcon,
+  entity: "The Bank of uPortlandia",
+  description: "bankIdDescription",
+  url: "/bank",
+  claim: "Uportlandia Bank ID",
+  steps: [
+    "bankIdStep1",
+    "bankIdStep2",
+    "bankIdStep3",
+    "bankIdStep4"
+  ],
+  details: [
+  ]
+};
+
 const CITY_ID = { // This should match the Registration Config
   id: "CITY_ID",
   name: "City ID",
@@ -405,6 +424,11 @@ const MUSEUM_MEMBERSHIP = {
 };
 
 // Attach claims to services
+BANK_ID.generatedClaims = [FIRST_NAME, LAST_NAME, ADDRESS, DATE_OF_BIRTH];
+BANK_ID.requiredClaims = BANK_ID.generatedClaims.map(c => ({
+  ...c,
+  issuedBy: [YOURSELF]
+}));
 CITY_ID.generatedClaims = [FIRST_NAME, LAST_NAME, ADDRESS, DATE_OF_BIRTH];
 CITY_ID.requiredClaims = CITY_ID.generatedClaims.map(c => ({
   ...c,
@@ -430,7 +454,7 @@ MUSEUM.requiredServices = [CITY_ID];
 MUSEUM.generatedClaims = [MUSEUM_MEMBERSHIP];
 
 export const SERVICES = {
-  CITY_ID, DIPLOMA, COMPANY, INSURANCE, PHARMACY, TRANSPORT, MUSEUM
+  BANK_ID, CITY_ID, DIPLOMA, COMPANY, INSURANCE, PHARMACY, TRANSPORT, MUSEUM
 };
 
 // Create route config for services

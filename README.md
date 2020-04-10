@@ -18,8 +18,15 @@ What's inside:
 
 ### backend
 
-src\server.js  -> backend/server.js  
-cd backend `$ node server`
+**Lambdas**
+
+Start Serverless Offline:
+```
+yarn local:api
+```
+
+// src\server.js  -> backend/server.js  
+// cd backend `$ node server`
 
 ### frontend 
 

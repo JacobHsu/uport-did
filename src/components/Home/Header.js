@@ -28,7 +28,8 @@ class Header extends React.Component {
         <h1>{home.name}</h1>
         <p>{t("tryDemo")}.</p>
         <p>{t("Play around")}.</p>
-        <CapsuleLinkButton to="/city">{t("Get Started")}</CapsuleLinkButton>
+        <CapsuleLinkButton to="/city">{t("Get Started")}</CapsuleLinkButton> 
+        &nbsp;<CapsuleLinkButton to="/bank">{t("Get DID")}</CapsuleLinkButton>
       </Hero.Welcome>
       <Hero.Content>
         <h3>{t("Its Simple")}</h3>

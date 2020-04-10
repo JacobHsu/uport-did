@@ -24,6 +24,15 @@ export default {
   "credentials included in": "Credentials included in",
   "getClaimLabel": "Get",
 
+  // Sidebar
+  "The Bank of uPortlandia": "The bank of uPort DID",
+  "bankIdDisplayName": "Bank ID",
+  "bankIdDescription": "Identify yourself with one click. Get a digital Bank ID. Enjoy quick, seamless, and often free access to many city services.",
+  "bankIdStep1": "Login with uPort",
+  "bankIdStep2": "Enter your information",
+  "bankIdStep3": "Get verified",
+  "bankIdStep4": "Receive Bank ID",
+  
   // Footer
   "Powered by": "Powered by",
 
@@ -92,6 +101,8 @@ export default {
   "Address": "Address",
   "Date of Birth": "Date of Birth",
 
+  "BankID": "Bank ID",
+  "Bank ID": "Bank ID",
   "CityID": "City ID",
   "City ID": "City ID",
   "Diploma": "Diploma",

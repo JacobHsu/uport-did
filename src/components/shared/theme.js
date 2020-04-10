@@ -42,6 +42,12 @@ export const colors = {
   errorBg: "#ffebee",
   homeButtonBg: "#4654D1",
 
+  BANK_ID: {
+    primary: "#1B998B",
+    mutedText: "#8DCCC5",
+    buttonBg: "linear-gradient(94.94deg, #1B998B 0%, #59C1BE 99.15%)",
+    buttonHoverBg: "linear-gradient(94.94deg, #167C71 0%, #4BA5A3 99.15%)"
+  },
   CITY_ID: {
     primary: "#1B998B",
     mutedText: "#8DCCC5",
