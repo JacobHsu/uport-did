@@ -6,8 +6,11 @@ import {
   REDIR_REGN_FORM,
   REDIR_REGN_FORM_BANK,
   REDIR_REGN_FORM_SUB,
+  REDIR_REGN_FORM_SUB_BANK,
   REDIR_REGN_RCD,
+  REDIR_REGN_RCD_BANK,
   REDIR_REGN_EXISTS,
+  REDIR_REGN_EXISTS_BANK,
   REDIR_FAIL,
   REDIR_SERV_HOME,
   REDIR_RCV_CLAIM,
@@ -45,12 +48,24 @@ function* redirectToRegnFormSubmit() {
   yield put(push(`${regnBaseUrl}/submitted`));
 }
 
+function* redirectToRegnFormBankSubmit() {
+  yield put(push(`${regnBankUrl}/submitted`));
+}
+
 function* redirectToRegnReceived() {
   yield put(push(`${regnBaseUrl}/complete`));
 }
 
+function* redirectToRegnBankReceived() {
+  yield put(push(`${regnBankUrl}/complete`));
+}
+
 function* redirectToRegnExists() {
   yield put(push(`${regnBaseUrl}/exists`));
+}
+
+function* redirectToRegnBankExists() {
+  yield put(push(`${regnBankUrl}/exists`));
 }
 
 function* redirectToServiceHome(action) {
@@ -88,8 +103,11 @@ export default function* handleRedirects() {
   yield spawn(takeEvery, REDIR_REGN_FORM, redirectToRegnForm);
   yield spawn(takeEvery, REDIR_REGN_FORM_BANK, redirectToRegnBankForm);
   yield spawn(takeEvery, REDIR_REGN_FORM_SUB, redirectToRegnFormSubmit);
+  yield spawn(takeEvery, REDIR_REGN_FORM_SUB_BANK, redirectToRegnFormBankSubmit);
   yield spawn(takeEvery, REDIR_REGN_RCD, redirectToRegnReceived);
+  yield spawn(takeEvery, REDIR_REGN_RCD_BANK, redirectToRegnBankReceived);
   yield spawn(takeEvery, REDIR_REGN_EXISTS, redirectToRegnExists);
+  yield spawn(takeEvery, REDIR_REGN_EXISTS_BANK, redirectToRegnBankExists);
   yield spawn(takeEvery, REDIR_SERV_HOME, redirectToServiceHome);
   yield spawn(takeEvery, REDIR_RCV_CLAIM, redirectToReceiveClaim);
   yield spawn(takeEvery, REDIR_RCD_CLAIM, redirectToClaimReceived);

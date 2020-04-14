@@ -15,13 +15,13 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   onSubmit(details) {
     dispatch(actions.changeRegnInfo(details));
-    dispatch(actions.redirectToRegnFormSubmit());
+    dispatch(actions.redirectToRegnFormBankSubmit());
   },
   redirectToRegnHome() {
     dispatch(actions.redirectToRegnHome());
   },
   redirectToRegnExists() {
-    dispatch(actions.redirectToRegnExists());
+    dispatch(actions.redirectToRegnBankExists());
   }
 });
 

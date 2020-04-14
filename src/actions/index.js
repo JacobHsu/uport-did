@@ -140,12 +140,24 @@ export const redirectToRegnFormSubmit = () => ({
   type: ACTIONS.REDIR_REGN_FORM_SUB
 });
 
+export const redirectToRegnFormBankSubmit = () => ({
+  type: ACTIONS.REDIR_REGN_FORM_SUB_BANK
+});
+
 export const redirectToRegnReceived = () => ({
   type: ACTIONS.REDIR_REGN_RCD
 });
 
+export const redirectToRegnBankReceived = () => ({
+  type: ACTIONS.REDIR_REGN_RCD_BANK
+});
+
 export const redirectToRegnExists = () => ({
   type: ACTIONS.REDIR_REGN_EXISTS
+});
+
+export const redirectToRegnBankExists = () => ({
+  type: ACTIONS.REDIR_REGN_EXISTS_BANK
 });
 
 export const changeRegnInfo = value => ({

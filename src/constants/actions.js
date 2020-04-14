@@ -37,3 +37,7 @@ export const REDIR_FAIL             = "REDIR_FAIL";
 export const HIDE_APP_DL            = "HIDE_APP_DL";
 export const NAV_EXTERNAL           = "NAV_EXTERNAL";
 export const NAV_EXTERNAL_RESET     = "NAV_EXTERNAL_RESET";
+
+export const REDIR_REGN_FORM_SUB_BANK    = "REDIR_REGN_FORM_SUB_BANK";
+export const REDIR_REGN_RCD_BANK         = "REDIR_REGN_RCD_BANK";
+export const REDIR_REGN_EXISTS_BANK      = "REDIR_REGN_EXISTS_BANK";

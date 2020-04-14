@@ -48,7 +48,7 @@
     "uport-transports": "^0.2.5"
   },
   "scripts": {
-    "local": "yarn start && yarn local:api",
+    "local": "yarn local:api",
     "setup": "node node_scripts/setup",
     "start": "react-scripts start",
     "build": "react-scripts build",

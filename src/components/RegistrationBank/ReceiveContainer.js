@@ -24,7 +24,7 @@ const mapDispatchToProps = dispatch => ({
     dispatch(actions.redirectToRegnForm());
   },
   redirectToRegnReceived() {
-    dispatch(actions.redirectToRegnReceived());
+    dispatch(actions.redirectToRegnBankReceived());
   }
 });
 

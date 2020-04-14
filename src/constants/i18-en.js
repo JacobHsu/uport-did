@@ -28,7 +28,7 @@ export default {
   "The Bank of uPortlandia": "The bank of uPort DID",
   "bankIdDisplayName": "Bank ID",
   "bankIdDescription": "Identify yourself with one click. Get a digital Bank ID. Enjoy quick, seamless, and often free access to many city services.",
-  "bankIdStep1": "Login with uPort1",
+  "bankIdStep1": "Login with uPort",
   "bankIdStep2": "Enter your information",
   "bankIdStep3": "Get verified",
   "bankIdStep4": "Receive Bank ID",
