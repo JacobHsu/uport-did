@@ -24,6 +24,7 @@ const getCredentials = (serviceId) => {
 }
 
 app.get("/api/ping", (req, res) => {
+  console.log('ISSUERS', ISSUERS)
   res.send("OK");
 });
 
@@ -68,12 +69,14 @@ app.post("/api/send_verification", async (req, res) => {
   res.json({ jwt });
 });
 
+// after app response
 app.post("/api/verify_credentials", async (req, res) => {
   const { serviceId, token } = req.body;
   const credentials = getCredentials(serviceId);
   const response = await verifyJWT(token, { audience: credentials.did });
   const profile = await credentials.processDisclosurePayload(response);
   profile.publicEncKey = profile.boxPub;
+  console.log('response', profile)
   res.json({ profile });
 });
 

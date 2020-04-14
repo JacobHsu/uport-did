@@ -132,6 +132,10 @@ export const redirectToRegnForm = () => ({
   type: ACTIONS.REDIR_REGN_FORM
 });
 
+export const redirectToRegnFormBank = () => ({
+  type: ACTIONS.REDIR_REGN_FORM_BANK
+});
+
 export const redirectToRegnFormSubmit = () => ({
   type: ACTIONS.REDIR_REGN_FORM_SUB
 });

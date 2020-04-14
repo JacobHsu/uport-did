@@ -28,7 +28,7 @@ export default {
   "The Bank of uPortlandia": "The bank of uPort DID",
   "bankIdDisplayName": "Bank ID",
   "bankIdDescription": "Identify yourself with one click. Get a digital Bank ID. Enjoy quick, seamless, and often free access to many city services.",
-  "bankIdStep1": "Login with uPort",
+  "bankIdStep1": "Login with uPort1",
   "bankIdStep2": "Enter your information",
   "bankIdStep3": "Get verified",
   "bankIdStep4": "Receive Bank ID",
@@ -116,6 +116,7 @@ export default {
   "Receive your": "Receive your",
   "back": "Back",
   "Login with uPort": "Login with uPort",
+  "Login with DID": "Login with DID",
   "will ask you to share": "will ask you to share",
   "Your claims were succesfully shared with": "Your claims were succesfully shared with",
   "is going to send your new claims to your uPort app": "",
@@ -124,6 +125,12 @@ export default {
   "regnLandingStep1": "Get things done without leaving your home. No more standing in lines.",
   "regnLandingStep2": "Access services and programs offered by the City",
   "regnLandingStep3": "Get a free one-year membership at many of the City's leading museums, zoos, concert halls, and botanical gardens",
+
+  
+  "regnLandingHeadingBank": "Join thousands of fellow Bank DID users!",
+  "regnLandingStep1Bank": "Get things done without leaving your home. No more standing in lines.",
+  "regnLandingStep2Bank": "Access services and programs offered by the Bank DID",
+  "regnLandingStep3Bank": "Take your businesses to the next level are opening up to the possibilities of this new technology",
 
   // Login
   "Open the uPort app to login": "Open the uPort app to login",
@@ -158,7 +165,7 @@ export default {
   "Number, Street Name, Apt #": "Number, Street Name, Apt #",
   "Submit": "Submit",
 
-  "Psst, even though it's just a demo": "Psst, even though it's just a demo...",
+  "Psst, even though it's just a demo": "One more thing...",
   "Any data that you enter is securely protected and encrypted": "Any data that you enter is securely protected and encrypted. It will be added as an attestation to your uPort Identity (you can always delete it at any time).",
   "We do not store any of this information and do not reveal it to any party": "We do not store any of this information and do not reveal it to any party.",
 

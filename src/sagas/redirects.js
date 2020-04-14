@@ -4,6 +4,7 @@ import { push, replace } from "connected-react-router"
 import {
   REDIR_REGN_HOME,
   REDIR_REGN_FORM,
+  REDIR_REGN_FORM_BANK,
   REDIR_REGN_FORM_SUB,
   REDIR_REGN_RCD,
   REDIR_REGN_EXISTS,
@@ -15,9 +16,10 @@ import {
   REDIR_HOME
 } from "../constants/actions";
 import { navigateExternalReset } from "../actions";
-import { SERVICES, registration } from "../constants/config";
+import { SERVICES, registration, myregistration } from "../constants/config";
 
 const regnBaseUrl = SERVICES[registration.serviceId].url;
+const regnBankUrl = SERVICES[myregistration.serviceId].url;
 
 function* redirectToHome() {
   yield put(push("/"));
@@ -27,8 +29,16 @@ function* redirectToRegnHome() {
   yield put(push("/city"));
 }
 
+function* redirectToRegnBank() {
+  yield put(push("/bank"));
+}
+
 function* redirectToRegnForm() {
   yield put(push(`${regnBaseUrl}/form`));
+}
+
+function* redirectToRegnBankForm() {
+  yield put(push(`${regnBankUrl}/form`));
 }
 
 function* redirectToRegnFormSubmit() {
@@ -74,7 +84,9 @@ function* navigateExternal(action) {
 
 export default function* handleRedirects() {
   yield spawn(takeEvery, REDIR_REGN_HOME, redirectToRegnHome);
+  yield spawn(takeEvery, REDIR_REGN_HOME, redirectToRegnBank);
   yield spawn(takeEvery, REDIR_REGN_FORM, redirectToRegnForm);
+  yield spawn(takeEvery, REDIR_REGN_FORM_BANK, redirectToRegnBankForm);
   yield spawn(takeEvery, REDIR_REGN_FORM_SUB, redirectToRegnFormSubmit);
   yield spawn(takeEvery, REDIR_REGN_RCD, redirectToRegnReceived);
   yield spawn(takeEvery, REDIR_REGN_EXISTS, redirectToRegnExists);

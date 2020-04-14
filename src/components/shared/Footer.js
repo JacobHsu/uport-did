@@ -4,10 +4,10 @@ import { useTranslation } from "react-i18next";
 
 import { Container } from "../shared/grid";
 import * as theme from "../shared/theme";
-import UportLogo from "../../images/uport-logo.svg";
+// import UportLogo from "../../images/uport-logo.svg";
 
 // eslint-disable-next-line
-const link = <a href="https://uport.me" target="_blank">uPort</a>;
+const link = <a href="https://www.w3.org/TR/did-core/" target="_blank">DID</a>;
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -15,7 +15,7 @@ const Footer = () => {
     <Container>
       <Bar />
       <Center>
-        <Logo src={UportLogo} />
+        {/* <Logo src={UportLogo} /> */}
         <p>{t("Powered by")} {link}</p>
       </Center>
     </Container>
@@ -53,9 +53,9 @@ const Center = styled.div`
   width: 15em;
   z-index: 3;
 `;
-const Logo = styled.img`
-  display: inline-block;
-  margin-right: 10px;
-`;
+// const Logo = styled.img`
+//   display: inline-block;
+//   margin-right: 10px;
+// `;
 
 export default Footer;

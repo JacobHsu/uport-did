@@ -3,12 +3,13 @@ import { Route, Switch } from "react-router-dom";
 import { ConnectedRouter } from "connected-react-router";
 
 import history from "../utils/history";
-import { registration, routes } from "../constants/config";
+import { myregistration, registration, routes } from "../constants/config";
 import App from "../components/AppContainer";
 import Redirect from "../components/Redirect";
 import Debug from "../components/Debug";
 import Home from "../components/Home";
 import Registration from "../components/Registration";
+import RegistrationBank from "../components/RegistrationBank";
 import Service from "../components/Service";
 
 export default () => (<ConnectedRouter history={history}>
@@ -25,6 +26,10 @@ export default () => (<ConnectedRouter history={history}>
       <App>
         <Debug />
       </App>} />
+    <Route path={myregistration.path} render={() =>
+      <App serviceId={registration.serviceId}>
+        <RegistrationBank />
+      </App>} />  
     <Route path={registration.path} render={() =>
       <App serviceId={registration.serviceId}>
         <Registration />
